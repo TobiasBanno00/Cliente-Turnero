@@ -1,0 +1,48 @@
+@import "../../scss/index.scss";
+
+.form-Login {
+    
+    
+    .form-group {
+        padding-bottom: 40px;
+      input {
+        width: 25vw;
+        font-size: 1.2em;
+      }
+    }
+  
+    button {
+        width: 100%;
+        background-color: $grey-dark;
+        border: 1px solid #fff;
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        font-weight: bold;
+        padding: 15px;
+  
+      .spinner-border {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    button:hover{
+        background-color: $grey-light;
+        border: 1px solid #fff;
+        color: rgb(255, 255, 255);
+    }
+
+
+    .button-registro{
+        padding: 12px;
+    
+    }
+    p{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 1.2em;
+        color: $yellow-light;
+    }
+
+
+  }

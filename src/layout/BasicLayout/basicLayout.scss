@@ -1,0 +1,17 @@
+.basic-layout {
+    padding: 0 !important;
+    margin:0 !important;
+
+    &__menu {
+      width: 100vw;
+    }
+  
+    &__content {
+      min-height: 100vh;
+      padding: 0 !important;
+    }
+
+    &__footer {
+      min-height: 14vh;
+    }
+  }
