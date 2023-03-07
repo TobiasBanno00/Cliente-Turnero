@@ -4,14 +4,13 @@ import Footer from "../../components/Footer";
 
 import "./basicLayout.scss";
 
-export default function BasicLayout(props) {
-  const {children } = props;
+export default function BasicLayout({children, setRefreshCheckLogin }) {
 
   return (
     <div className={`basic-layout`}>
       
         <div  className="basic-layout__menu">
-          <Menu/>
+          <Menu setRefreshCheckLogin={setRefreshCheckLogin} />
         </div>
         <div  className="basic-layout__content">
           {children}

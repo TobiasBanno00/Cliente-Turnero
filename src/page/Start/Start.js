@@ -6,9 +6,9 @@ import Contact from "../Contact"
 
 import "./start.scss"
 
-function Start() {
+function Start({setRefreshCheckLogin}) {
   return (
-    <BasicLayout>
+    <BasicLayout setRefreshCheckLogin={setRefreshCheckLogin} >
         <div className='start' id='inicio'>
             <img src={logo} alt="logo" />
             <div className='start__info'>

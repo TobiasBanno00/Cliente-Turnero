@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
-/* import { values, size } from "lodash";
 import { toast } from "react-toastify";
+import { values, size } from "lodash";
 import { isEmailValid } from "../../utils/validations";
-import { signInApi, setTokenApi } from "../../api/auth";*/
+
+import { signInApi, setTokenApi } from "../../api/auth"; 
 
 import "./formLogin.scss";
 
-function FormLogin(props) {
+function FormLogin({setRefreshCheckLogin}) {
+
   const [formData, setFormData] = useState(initialFormValue());
   const [signInLoading, setSignInLoading] = useState(false);
 
   const onSubmit = e => {
-    /* e.preventDefault();
-
+     e.preventDefault();
+     
+      
     let validCount = 0;
     values(formData).some(value => {  //por cada iteracion devuelve el valor de cada item del objt
       value && validCount++;
@@ -32,8 +35,8 @@ function FormLogin(props) {
             if (response.message) {
               toast.warning(response.message);
             } else {
-              console.log(response.token);
               setTokenApi(response.token);
+              toast.success("Inicio de sesion exitosa")
               setRefreshCheckLogin(true);
             }
           })
@@ -44,7 +47,7 @@ function FormLogin(props) {
             setSignInLoading(false);
           });
       }
-    } */
+    } 
   };
 
   const onChange = e => {
@@ -65,9 +68,9 @@ function FormLogin(props) {
         <Form.Group className="form-group">
           <Form.Control
             type="password"
-            name="password"
+            name="contraseña"
             placeholder="Contraseña"
-            defaultValue={formData.password}
+            defaultValue={formData.contraseña}
           />
         </Form.Group>
 
@@ -76,8 +79,8 @@ function FormLogin(props) {
         </Button>
 
         <p>¿No estás registrado cómo cliente?</p>
-        <Button className="button-registro" variant="primary" type="submit">
-          {!signInLoading ? "Registrarse" : <Spinner animation="border" />}
+        <Button className="button-registro" variant="primary">
+           Registrarse
         </Button>
 
       </Form>
@@ -89,7 +92,7 @@ function FormLogin(props) {
 function initialFormValue() {
   return {
     email: "",
-    password: ""
+    contraseña: ""
   }
 }
 export default FormLogin
