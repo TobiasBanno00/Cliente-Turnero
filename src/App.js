@@ -24,7 +24,7 @@ function App() {
   return (
     <AuthContext.Provider value={user}>
         
-        {adm? <h1>ADM ON</h1> :<Routing  setRefreshCheckLogin={setRefreshCheckLogin}/>}
+        {adm? <h1>ADM ON</h1> :<Routing setRefreshCheckLogin={setRefreshCheckLogin}/>}
 
         <ToastContainer               // le damos la posición y diferentes configuracion a los mensajes de éxito/error que verá el cliente
         position="top-right"

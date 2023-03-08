@@ -10,7 +10,7 @@ export default function BasicLayout({children, setRefreshCheckLogin }) {
     <div className={`basic-layout`}>
       
         <div  className="basic-layout__menu">
-          <Menu setRefreshCheckLogin={setRefreshCheckLogin} />
+          <Menu  setRefreshCheckLogin={setRefreshCheckLogin} />
         </div>
         <div  className="basic-layout__content">
           {children}

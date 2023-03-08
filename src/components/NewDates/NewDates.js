@@ -66,10 +66,6 @@ function NewDates({user, setRefreshCheckLogin}) {
         </Form.Group>
 
         <Form.Group className='formNewDates__group'>
-          <Form.Control type="email" placeholder="Email" name="email" Value={user.sub.email}/>
-        </Form.Group>
-
-        <Form.Group className='formNewDates__group'>
           <Form.Control type="text" placeholder="Celular (caracteristica + celular)" name="celular" defaultValue={user.sub.celular}/>
         </Form.Group>
 

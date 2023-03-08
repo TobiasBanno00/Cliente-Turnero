@@ -17,6 +17,10 @@ function Menu({setRefreshCheckLogin}) {
 
   const user = useAuth();
 
+  var closeModal=()=>{
+    setShowModal(false);
+  }
+
   const openModal = content => {    // abrimos modal que pasamos por parametro
     setShowModal(true);
     setContentModal(content);
@@ -24,7 +28,7 @@ function Menu({setRefreshCheckLogin}) {
 
   useEffect(() => {             // si user tiene datos cerramos el modal de login
     if(user){
-      setShowModal(false);
+      closeModal();
     }
     setUserOptions(false)
   }, [user])
@@ -62,7 +66,7 @@ function Menu({setRefreshCheckLogin}) {
                 : <></> }
                 </>
                 :
-                <a className="menu__boton" onClick={() =>openModal(<FormLogin setRefreshCheckLogin={setRefreshCheckLogin} />)} >Iniciar Sesión </a>}
+                <a className="menu__boton" onClick={() =>openModal(<FormLogin  closeModal={closeModal} setContentModal={setContentModal} setRefreshCheckLogin={setRefreshCheckLogin} />)} >Iniciar Sesión </a>}
                 
       </div>
       <BasicModal show={showModal} setShow={setShowModal}> {contentModal} </BasicModal>

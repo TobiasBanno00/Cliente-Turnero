@@ -1,0 +1,37 @@
+@import "../../scss/index.scss";
+
+.formRegister{
+    
+    h2{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        color: #fff !important;
+        padding-bottom: 10px;
+        
+        text-shadow: 0px 0px #000000, 0px -0px #000000, 0px -0px#000000, 0px 0px #000000, 4px 4px #000000;
+    }
+
+    &__group{
+        padding-bottom: 4.5vh;
+        input {
+            font-size: 1.2em;
+          }
+    }
+
+    button {
+        width: 100%;
+        background-color: $grey-dark;
+        border: 1px solid #fff;
+        color: rgb(255, 255, 255) !important;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 15px;
+        transition: all ease-in-out .3s;
+    }
+
+    button:hover{
+        background-color: $grey-light;
+        border: 1px solid #fff;
+        color: rgb(255, 255, 255);
+    }
+}

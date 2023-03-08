@@ -1,5 +1,5 @@
 import Start from "../page/Start";
-import SignIn from "../page/SignIn";
+import Shift from "../page/Shift";
 import Error404 from "../page/404/Err404";
 
 export default [
@@ -9,9 +9,9 @@ export default [
     page: Start,
     },
   {
-    path: "/iniciarSesion",
+    path: "/turno",
     exact: true,
-    page: SignIn,
+    page: Shift,
   },
   {
     path: "*",

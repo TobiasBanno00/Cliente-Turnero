@@ -3,19 +3,24 @@ import { Form, Button, Spinner } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { values, size } from "lodash";
 import { isEmailValid } from "../../utils/validations";
-
 import { signInApi, setTokenApi } from "../../api/auth"; 
+import FormRegister from "../FormRegister";
 
 import "./formLogin.scss";
 
-function FormLogin({setRefreshCheckLogin}) {
+function FormLogin({closeModal, setContentModal, setRefreshCheckLogin}) {
 
   const [formData, setFormData] = useState(initialFormValue());
   const [signInLoading, setSignInLoading] = useState(false);
 
+  let openRegister=()=>{
+    setContentModal(<FormRegister closeModal={closeModal} />)
+  }
+
+
+  /* --------------------------------------------------------------ONSUBMIT */
   const onSubmit = e => {
      e.preventDefault();
-     
       
     let validCount = 0;
     values(formData).some(value => {  //por cada iteracion devuelve el valor de cada item del objt
@@ -50,6 +55,7 @@ function FormLogin({setRefreshCheckLogin}) {
     } 
   };
 
+  /* --------------------------------------------------------------ONCHAGE */
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -79,7 +85,7 @@ function FormLogin({setRefreshCheckLogin}) {
         </Button>
 
         <p>¿No estás registrado cómo cliente?</p>
-        <Button className="button-registro" variant="primary">
+        <Button onClick={openRegister} className="button-registro" variant="primary">
            Registrarse
         </Button>
 

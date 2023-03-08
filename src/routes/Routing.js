@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { map } from "lodash";
-import Start from "../page/Start"
 import configRouting from "./configRouting";
 
 
